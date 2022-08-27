@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  additionapi:
+    image: ${DOCKER_REGISTRY-}additionapi
+    build:
+      context: .
+      dockerfile: Services/AdditionAPI/Dockerfile
+
+  divisionapi:
+    image: ${DOCKER_REGISTRY-}divisionapi
+    build:
+      context: .
+      dockerfile: Services/DivisionAPI/Dockerfile
+
+
+  multiplicationapi:
+    image: ${DOCKER_REGISTRY-}multiplicationapi
+    build:
+      context: .
+      dockerfile: Services/MultiplicationAPI/Dockerfile
+
+
+  subtractionapi:
+    image: ${DOCKER_REGISTRY-}subtractionapi
+    build:
+      context: .
+      dockerfile: Services/SubtractionAPI/Dockerfile
+
